@@ -1,0 +1,14 @@
+{
+  "name": "build-battle-arena",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A browser build-and-shoot arena with multiplayer rooms and bot mode.",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "open:chrome": "open -a 'Google Chrome' http://localhost:${PORT:-3000}"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

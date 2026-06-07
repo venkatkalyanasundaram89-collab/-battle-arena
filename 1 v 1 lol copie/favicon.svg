@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Build Battle Arena">
+  <rect width="64" height="64" rx="12" fill="#07111f"/>
+  <path d="M13 39 38 14l12 12-25 25H13V39Z" fill="#22d3ee"/>
+  <path d="M21 43h7l24-24-7-7-24 24v7Z" fill="#3b82f6"/>
+  <circle cx="44" cy="43" r="8" fill="#ef4444"/>
+  <path d="M12 52h40" stroke="#f4f0e7" stroke-width="5" stroke-linecap="round"/>
+</svg>

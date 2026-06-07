@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A browser build-and-shoot duel game with room codes, bot play, shooting, and buildable walls.">
+    <meta name="theme-color" content="#07111f">
+    <title>Build Battle Arena</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="arena.css">
+  </head>
+  <body>
+    <main class="game">
+      <section class="stage" aria-label="Build Battle Arena game">
+        <canvas id="arena" width="1200" height="760"></canvas>
+        <div class="hud">
+          <div>
+            <p class="eyebrow">Build Battle Arena</p>
+            <h1>Build. Dodge. Win the duel.</h1>
+          </div>
+          <div class="stats" aria-live="polite">
+            <span><strong id="playerHealth">100</strong> You</span>
+            <span><strong id="botHealth">100</strong> Rival</span>
+            <span><strong id="rounds">0</strong> Wins</span>
+          </div>
+        </div>
+
+        <div class="overlay" id="overlay">
+          <h2>Join a duel</h2>
+          <p>Enter the same room code on two browsers. Move with WASD, aim with the mouse, click to shoot, and press Q to build.</p>
+          <label for="roomInput">Room code</label>
+          <input id="roomInput" value="DUEL" maxlength="10" autocomplete="off">
+          <div class="button-row">
+            <button id="startButton" type="button">Join Room</button>
+            <button id="botButton" type="button">Play Bot</button>
+          </div>
+        </div>
+      </section>
+
+      <aside class="panel">
+        <header>
+          <p class="eyebrow">Controls</p>
+          <h2>Fast duel kit</h2>
+        </header>
+
+        <div class="control-grid">
+          <span>Move</span>
+          <strong>WASD / Arrows</strong>
+          <span>Aim</span>
+          <strong>Mouse</strong>
+          <span>Shoot</span>
+          <strong>Click</strong>
+          <span>Build</span>
+          <strong>Q</strong>
+          <span>Room</span>
+          <strong id="roomLabel">Not joined</strong>
+        </div>
+
+        <section class="tip">
+          <h2>Goal</h2>
+          <p>Drop the rival bot before it drops you. Walls block shots and decay over time.</p>
+        </section>
+      </aside>
+    </main>
+
+    <script src="arena.js"></script>
+  </body>
+</html>
